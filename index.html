@@ -6,113 +6,20 @@
 <link rel="manifest" href="manifest.json">
 <title>PWA Sample</title>
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.1.0/css/bulma.min.css">
-<link rel="stylesheet" type="text/css" href="./css/grid-metro.css">
+<script>
+// ServiceWorker登録：https://developers.google.com/web/fundamentals/primers/service-workers/?hl=ja
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('sw.js').then(function(registration) {
+		console.log('ServiceWorker registration successful with scope: ', registration.scope);
+	}).catch(function(err) {
+		console.log('ServiceWorker registration failed: ', err);
+	});
+}
+</script>
 </head>
 <body>
-	<nav class="nav has-shadow" id="top">
-		<div class="container">
-			<div class="nav-left">
-				<a class="nav-item" href="index.html">
-					<img src="./images/top.png" alt="Description">
-				</a>
-			</div>
-
-
-		</div>
-	</nav>
-	<section class="section app">
-		<!-- Uncomment if you want to use a container <div class="container"> -->
-		<div class="tile is-ancestor">
-			<div class="tile is-parent">
-				<!-- artcle 枠囲い -->
-
-				<article class="tile is-child notification is-warning has-text-centered stat-tile">
-					<br>
-					<p class="title">加藤光騎</p>
-				</article>
-			</div>
-			<a href="https://github.com/kakao100" div class="tile is-parent">
-				<article class="tile is-child notification is-dark has-text-centered stat-tile" >
-					<p class="title">github(link)</p>
-					<p class="subtitle"><i class="fa fa-github"></i></p>
-				</article>
-			</a>
-			<a  href="https://twitter.com/katokoki146" class="tile is-parent">
-				<article class="tile is-child notification is-info has-text-centered stat-tile">
-					<p class="title">twitter(link)</p>
-					<p class="subtitle"><i class="fa fa-twitter"></i></p>
-				</article>
-			</a>
-			<div class="tile is-parent">
-				<article class="tile is-child notification is-primary has-text-centered stat-tile">
-					<p class="title">凍結中</p>
-					<p class="subtitle"><i class="fa fa-facebook"></i></p>
-				</article>
-			</div>
-
-		</div>
-		<div class="tile is-ancestor">
-
-			<div class="tile is-vertical is-8">
-				<div class="tile">
-					<div class="tile is-parent is-vertical">
-						<article class="tile is-child notification is-primary">
-							<p class="title">自己紹介</p>
-							<p class="subtitle">加藤光騎<br>明治大学理工学部情報科学科</p>
-							<p>エンジニアをめざしています</p>
-						</article>
-						<article class="tile is-child notification is-warning">
-							<p class="title">...tiles</p>
-							<p class="subtitle">Bottom tile</p>
-						</article>
-					</div>
-					<div class="tile is-parent">
-						<article class="tile is-child notification is-info">
-							<p class="title">Middle tile</p>
-							<p class="subtitle">With an image</p>
-							<figure class="image is-4by3">
-								<img src="http://placehold.it/640x480">
-							</figure>
-						</article>
-					</div>
-				</div>
-				<div class="tile is-parent is-bold">
-					<article class="tile is-child notification is-danger">
-						<p class="title">メールアドレス</p>
-						<p class="subtitle">katokoki146@gmail.com</p>
-						<div class="content">
-							<!-- Content -->
-						</div>
-					</article>
-				</div>
-			</div>
-
-			<div class="tile is-parent">
-				<article class="tile is-child notification is-success">
-					<div class="content">
-						<p class="title">Tall tile</p>
-						<p class="subtitle">With even more content</p>
-						<div class="content">
-							<!-- Content -->
-						</div>
-					</div>
-				</article>
-			</div>
-		</div>
-		<!-- Uncomment if you want to use a container </div> -->
-	</section>
-	<!-- <script>
-	// ServiceWorker登録：https://developers.google.com/web/fundamentals/primers/service-workers/?hl=ja
-	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('sw.js').then(function(registration) {
-			console.log('ServiceWorker registration successful with scope: ', registration.scope);
-		}).catch(function(err) {
-			console.log('ServiceWorker registration failed: ', err);
-		});
-	}
-	</script> -->
-
+<canvas id="stage"></canvas>
+<script src="drawer.js"></script>
+<p>a</p>
 </body>
 </html>
