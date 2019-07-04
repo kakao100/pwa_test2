@@ -2,6 +2,9 @@ var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
 	'/pwa_test2/',
 	'/pwa_test2/css/style.css',
+	'/pwa_test2/css/grid-metro.css',
+
+
 ];
 self.addEventListener('install', function(event) {
 	event.waitUntil(

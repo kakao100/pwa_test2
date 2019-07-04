@@ -1,6 +1,6 @@
 {
-	"short_name": "ショートネーム",
-	"name": "ショートじゃないネーム",
+	"short_name": "kato",
+	"name": "katoのポートフォーリオ",
 	"display": "standalone",
 	"start_url": "index.html",
 	"icons": [
